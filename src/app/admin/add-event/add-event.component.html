@@ -1,5 +1,4 @@
-<!-- <p>add-event works!</p> -->
-<!-- <p>edit-student works!</p> -->
+
 <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Add Event</h3>
 <div class="form-outline mb-4">
     <label class="form-label" for="ID">ID</label>
@@ -19,31 +18,22 @@
     <label class="form-label" for="MainSpeaker">Main Speaker</label>
     <br>
     <p-dropdown [options]="AllSpeakers" [(ngModel)]="ev.MainSpeaker"></p-dropdown>
-    <!-- <input [(ngModel)]="ev.eventDate" type="date" id="Date" class="form-control" /> -->
+
 </div>
 <div class="form-outline mb-4">
     <label class="form-label" for="OtherSpeakers">Other Speakers</label>
     <br>
-    <!-- <p-dropdown [options]="AllSpeakers" [(ngModel)]="OtherSpeakers"></p-dropdown> -->
-    <!-- <p-listbox [options]="AllSpeakers" [(ngModel)]="ev.OtherSpeakers"></p-listbox> -->
+
     <p-multiSelect [options]="AllSpeakers" [(ngModel)]="ev.OtherSpeakers"></p-multiSelect>
-    <!-- <input [(ngModel)]="ev.eventDate" type="date" id="Date" class="form-control" /> -->
+
 </div>
 <div class="form-outline mb-4">
     <label class="form-label" for="Students">Students</label>
     <br>
-    <!-- <p-dropdown [options]="AllSpeakers" [(ngModel)]="OtherSpeakers"></p-dropdown> -->
-    <!-- <p-listbox [options]="AllStudents" [(ngModel)]="ev.students"></p-listbox> -->
+
     <p-multiSelect [options]="AllStudents" [(ngModel)]="ev.students"></p-multiSelect>
 
-    <!-- <input [(ngModel)]="ev.eventDate" type="date" id="Date" class="form-control" /> -->
 </div>
-<!-- <mat-chip-list aria-label="Fish selection">
-    <mat-chip>One fish</mat-chip>
-    <mat-chip>Two fish</mat-chip>
-    <mat-chip color="primary" selected>Primary fish</mat-chip>
-    <mat-chip color="accent" selected>Accent fish</mat-chip>
-</mat-chip-list> -->
 
 
 

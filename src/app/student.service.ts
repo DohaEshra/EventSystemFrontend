@@ -8,13 +8,12 @@ import { Student } from './_Models/student';
 })
 export class StudentService {
   baseurl="http://localhost:8080/Students";
- //token = localStorage.getItem("Authorization");
- //{message:string, token:string}
+
  viewEvents(token:string|null)
  { 
    let  headers_object = new HttpHeaders().set("Authorization", "Bearer " + token);
    if(token!==null)
-   //headers_object.set("Authorization", "Bearer " + token);
+
     return this.http.get<{data:Event[]}>(this.baseurl,{headers:headers_object})
 
   }

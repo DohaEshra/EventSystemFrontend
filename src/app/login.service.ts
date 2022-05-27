@@ -25,8 +25,6 @@ export class LoginService {
     return this.http.post<{message:string, token:string}>(this.SpkRegurl,{id:s._id, Email:s.Email,  username:s.UserName,
         password:s.password,  Address:{city:s.Address.city, street:s.Address.street, building:s.Address.building, role:"Speaker"}
   })
-    // id:s.id, Email:s.Email,  username:s.username,
-    //    password:s.password,  Address:{city:s.Address.city, street:s.Address.street, building:s.Address.building}
   }
   getToken()
   {

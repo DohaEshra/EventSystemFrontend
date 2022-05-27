@@ -10,15 +10,15 @@ import { Student } from 'src/app/_Models/student';
   styleUrls: ['./add-people-to-event.component.css']
 })
 export class AddPeopleToEventComponent implements OnInit {
-  //ev:Event = new Event(1, " ", "", " ", [], [])
+ 
   eventID:number=0;
   Speakers:Speaker[] = []; //whole array of speakers
-  AllSpeakers:string[]=[]//this.Speakers.map(a=>a.id)//only speaker's id
-  AddSpeakers:string[]|null=[]//this.Speakers.map(a=>a.id)//only speaker's id
+  AllSpeakers:string[]=[]//only speaker's id
+  AddSpeakers:string[]|null=[]//only speaker's id
 
-  Students:Student[] = []; //whole array of speakers
-  AllStudents:number[] =[]// this.Students.map(a=>a.id)
-  AddStudents:number[]|null =[]// this.Students.map(a=>a.id)
+  Students:Student[] = []; //whole array of Student
+  AllStudents:number[] =[]
+  AddStudents:number[]|null =[];
 
   constructor(public AdServ:AdminService) 
   {
@@ -34,13 +34,9 @@ export class AddPeopleToEventComponent implements OnInit {
   }
   AddPeopleEvent()
   {
-    //if(this.AddStudents==null)
-    // this.AdServ.AddPeopleToEvent(this.eventID, this.AddStudents, this.AddSpeakers)
-    // .subscribe(a=>console.log(a))
+
     this.AdServ.AddPeopleToEvent(this.eventID, this.AddStudents, this.AddSpeakers)?.subscribe(a=>console.log(a))
-    // if(this.AddSpeakers==null)
-    // {this.AdServ.AddPeopleToEvent(this.eventID, this.AddStudents, null)
-    // .subscribe(a=>console.log(a))}
+
   }
 
   ngOnInit(): void {

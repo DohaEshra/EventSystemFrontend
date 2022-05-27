@@ -12,7 +12,7 @@ roles:string[]=[]
 ShowAddEvent()
 {
   this.flag = 1;
-  //document.getElementById("AddEvent")?.hidden
+
 }
 ShowEditEvent()
 {

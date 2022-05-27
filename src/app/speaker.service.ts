@@ -8,19 +8,15 @@ import { Speaker } from './_Models/speaker';
 })
 export class SpeakerService {
   baseurl="http://localhost:8080/Speaker";
-  //token:string|null
+
   viewEvents()
   {
-   //let  headers_object = new HttpHeaders().set("Authorization", "Bearer " + token);
-   //if(token!==null)
-   //headers_object.set("Authorization", "Bearer " + token);
-   //,{headers:headers_object}
+
     return this.http.get<{data:Event[]}>(this.baseurl)
 
   }
 
-  //{ $set: {Email: request.body.Email, UserName: request.body.UserName, password:request.body.password, 
-  //Address:{city:request.body.Address.city, street:request.body.Address.street, building: request.body.Address.building}}
+
   EditProfile(token:string|null, speak:Speaker)
   {
     if(token!==null)

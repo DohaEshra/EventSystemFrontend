@@ -15,10 +15,7 @@ role:string="";
 email="";
 password="";
 request={email:this.email,password:this.password, role: this.role}
-// clicked(event:any)
-// {
-//   console.log(event);
-// }
+
 
   constructor(public logSer: LoginService, public router:Router ) { 
       this.Roles= ["Admin", "Student", "Speaker"];
@@ -27,12 +24,10 @@ request={email:this.email,password:this.password, role: this.role}
 
   Login(){
     console.log(this.role)
-    //let o:object= 
     this.logSer.Login(this.email, this.password, this.role).subscribe(a=>
-      {//a.token;
+      {
         localStorage.setItem("Authorization", a.token)
         this.router.navigateByUrl("/"+this.role);
-        //console.log(a.token);
       },
       err=>console.log(err)
       )

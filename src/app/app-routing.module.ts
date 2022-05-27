@@ -1,5 +1,5 @@
 import { StudentDetailsComponent } from './student/student-details/student-details.component';
-//import { ViewEventsComponent } from './student/view-events/view-events.component';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -15,7 +15,7 @@ const routes: Routes = [
   {path:"Student", component:StudentDetailsComponent},
   {path:"Admin", component:AdminDetailsComponent},
 
-  // {path:"Speaker", component:SpeakerDetailsComponent}
+
   {path:"Speaker",loadChildren:()=>import('./speaker/speaker.module').then(m=>m.SpeakerModule)}
 ];
 

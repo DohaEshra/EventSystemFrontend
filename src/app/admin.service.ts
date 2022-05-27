@@ -30,7 +30,7 @@ export class AdminService {
   }
   AddPeopleToEvent(eventID:number, students:number[]|null, Speakers:string[]|null)
   {
-    //if(students?.length>0)
+
     if(students==null||students.length==0)
     return this.http.put<{data:Event, message:string}>(this.baseurl+"/addpeople",{Eventid:eventID, addstudent:null, addspeaker:Speakers})
   
