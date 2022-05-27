@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Student } from './_Models/student';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -50,11 +51,12 @@ export class AdminService {
   }
   DeletePeople(role:string, email:string)
   {
-    return this.http.delete<{data:Event, message:string}>(this.baseurl+"/deletepeople",{params:{Deleterole:role, Email:email}})
+    return this.http.delete<{data:Event, message:string}>(this.baseurl+"/deletepeople",{params:{Deleterole:role, Email:email, role:"Admin"}})
+    
   }
   DeleteEvent(Id:number)
   {
-    return this.http.delete<{data:Event, message:string}>(this.baseurl,{body:{id:Id}})
+    return this.http.delete<{data:Event, message:string}>(this.baseurl,{params:{id:Id, role:"Admin"}})
   }
-  constructor(public http:HttpClient) { }
+  constructor(public http:HttpClient, public Ar:ActivatedRoute) { }
 }
