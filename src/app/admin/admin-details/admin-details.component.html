@@ -1,0 +1,51 @@
+<!-- <p>admin-details works!</p> -->
+<section *ngIf="flag==0">
+
+<button class="btn btn-danger" (click)="ShowAddEvent()">Add Event</button>
+<br>
+<br>
+    
+<button class="btn btn-danger" (click)="ShowEditEvent()">Edit Event</button>
+<br>
+<br>
+
+<button class="btn btn-danger" (click)="EditPeople()">Edit</button>
+<p-dropdown [options]="roles" [(ngModel)]="role"></p-dropdown>
+<br>
+<br>
+
+<button class="btn btn-danger" (click)="DeletePeople()">Delete People</button>
+<p-dropdown [options]="roles" [(ngModel)]="role"></p-dropdown>
+<br>
+<br>
+
+<button class="btn btn-danger" (click)="ShowAddPeople()">Add People to Event</button>
+<br>
+<br>
+<button class="btn btn-danger" (click)="DeleteEvent()">Delete Event</button>
+
+
+</section>
+
+<section *ngIf="flag==1">
+
+    <app-add-event></app-add-event>
+</section>
+<section *ngIf="flag==2">
+
+<app-edit-event></app-edit-event>
+</section>
+<section *ngIf="flag==3">
+
+        <app-edit-people [role]="role"></app-edit-people>
+</section>
+<section *ngIf="flag==4">
+
+    <app-add-people-to-event></app-add-people-to-event>
+</section>
+<section *ngIf="flag==5">
+<app-delete-people [role]="role" ></app-delete-people>
+</section>
+<section *ngIf="flag==6">
+    <app-delete-event></app-delete-event>
+</section>

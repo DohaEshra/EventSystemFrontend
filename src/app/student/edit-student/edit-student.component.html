@@ -1,0 +1,16 @@
+<!-- <p>edit-student works!</p> -->
+<h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Update Profile</h3>
+<div class="form-outline mb-4">
+    <label class="form-label" for="email">Email</label>
+  <input [(ngModel)]="Email" type="email" id="email" class="form-control" />
+</div>
+
+<!-- Number input -->
+<div class="form-outline mb-4">
+    <label class="form-label" for="Password">Password</label>
+    <input [(ngModel)]="Password" type="number" id="Password" class="form-control" />
+</div>
+
+
+<!-- Submit button -->
+<button type="submit" class="btn btn-primary btn-block mb-4" (click)="EditAcc()">Edit</button>
